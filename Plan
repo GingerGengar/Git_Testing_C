@@ -73,4 +73,5 @@ Pull Request branches to origin/master
         git push -u origin HEAD
     Subsequently, just do
         git push
-
+    To remove git remote,
+        git remote remove NAME_OF_BRANCH
