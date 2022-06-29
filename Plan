@@ -28,6 +28,10 @@ To stage files,
     git add file1 file2
 Alternatively, staging all files except for the ones in the gitignore,
     git add *
+To force staging all files, even the ones in the gitignore 
+    git add -f *
+To unstage a file,
+    git restore --staged file1.txt file2.txt 
 To make staging area finalized in a commit, say
     git commit -m "Give a helpful message on the git commit"
 
@@ -48,11 +52,25 @@ Make Branches
         git branch -a
     Switch to another git branch
         git checkout THE_OTHER_BRANCH
-
+    Please test that the branch is working well before merging.
+    To merge branch, go to master branch, then invoke merge with intended
+        git checkout master
+        git merge OTHER_BRANCH_NAME
+    After branch has been merged and works well, then it is safe to delete branches
+    Why delete branches? Branches are like ideas.
+    Once we are finished implementing the idea into reality, there is no longer any need of the idea.
+    So, the idea that is now already realized is useless and ought to be deleted. Invoke 
+        git branch -d MERGED_BRANCH_NAME
 
 Pull Request branches to origin/master
-
-View Pull Request from CLI
-
-
+    If the repository was cloned from external source using
+        git clone SOME_LINK_TO_ANOTHER
+    Then a remote origin already exists. To see, use 
+        git remote --verbose
+    Alternatively, if the repository was local and we want to add a remote, then
+        git remote add LINK:PATH_TO_GIT_REPO
+    First time pushing, use 
+        git push -u origin HEAD
+    Subsequently, just do
+        git push
 
