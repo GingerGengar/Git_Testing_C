@@ -16,6 +16,10 @@ Main.o: Main.cpp
 	@echo "Building Main..."
 	@$(Compiler) $(Flags) -o Main.o -c Main.cpp
 
+clean:
+	@echo "Removing Build Relics..."
+	@rm *.o
+
 #sub.o: sub.cpp
 #	@echo "Building sub..."
 #	@$(Compiler) $(Flags) -o sub.o -c sub.cpp
