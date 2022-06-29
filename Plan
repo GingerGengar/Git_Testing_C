@@ -42,6 +42,12 @@ To restore files from some commit
     git checkout COMMIT_NAME file1.txt file2.txt
 
 Make Branches
+    Creating New Branches
+        git checkout -b NEW_BRANCH_NAME
+    See ALL of the available branches, and where you are
+        git branch -a
+    Switch to another git branch
+        git checkout THE_OTHER_BRANCH
 
 
 Pull Request branches to origin/master
