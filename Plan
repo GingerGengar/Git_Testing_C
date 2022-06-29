@@ -22,12 +22,27 @@ To see the name, currently
 To see the email, currently
     git config user.email
 
-
 Make commits on git
+Git has an intermediate place called the staging area before commits are made.
+To stage files,
+    git add file1 file2
+Alternatively, staging all files except for the ones in the gitignore,
+    git add *
+To make staging area finalized in a commit, say
+    git commit -m "Give a helpful message on the git commit"
 
 Restore old versions
+To see all the history of the git commits,
+    git log
+To see the git commits pertaining to specific files
+    git log file1.txt file2.txt
+To restore a particular file to the last commit available,
+    git checkout HEAD file.txt
+To restore files from some commit
+    git checkout COMMIT_NAME file1.txt file2.txt
 
 Make Branches
+
 
 Pull Request branches to origin/master
 
