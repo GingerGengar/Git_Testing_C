@@ -1,5 +1,28 @@
 Objectives of learning git
 
+Setting a profile on git
+To list all variables in the profile:
+    git config -l
+Git has system profiles, global profiles, and local profiles.
+System profiles apply to all users and are written in /etc/git
+Global profiles apply to just a specific user and is written in ~/.gitconfig or ~/.config/git/config
+Local profiles only apply to a single project and is written in .git/config at the repository root
+The local profiles override the global profiles and the global profiles override the system profiles. So, if the local profile does not exist, the global profile is used. If the global profile does not exist then the system profile is used.
+Git needs an email and a name.
+To modify the user name in the global profile
+    git config --global user.name "GingerGengar"
+To modify the email in the global profile
+    git config --global user.email "GingerGengar123@gmail.com"
+One can modify the user name in the local profile
+    git config --local user.name "GingerGengar"
+One can modify the email in the local profile
+    git config --local user.email "GingerGengar123@gmail.com"
+To see the name, currently
+    git config user.name
+To see the email, currently
+    git config user.email
+
+
 Make commits on git
 
 Restore old versions
